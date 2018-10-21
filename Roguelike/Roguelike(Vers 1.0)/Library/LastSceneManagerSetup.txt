@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SceneForTestDima.unity
+- path: Assets/Scenes/SceneForTestDanil.unity
   isLoaded: 1
   isActive: 1
