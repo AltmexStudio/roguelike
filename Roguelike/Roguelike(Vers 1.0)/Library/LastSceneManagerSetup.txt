@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/SceneForTestIlya.unity
+=======
+- path: Assets/Scenes/SceneForTestDanil.unity
+>>>>>>> 9366f71c5ba9205cd88cb5b682de25e3547172e4
   isLoaded: 1
   isActive: 1
