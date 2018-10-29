@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -768,13 +768,15 @@ public class RandomGenerator : MonoBehaviour
         {
             int[] v = Napr(takeroom[i]);
 
-            if (v[2] == 1 && a1 == takeroom[i].transform.position.x && b1 + 4.0f == takeroom[i].transform.position.y && e1 == true)
+            if (v[2] == 0 && a1 == takeroom[i].transform.position.x && (b1 + 4.0f) == takeroom[i].transform.position.y && e1 == true)
             {
+                
                 Instantiate(dend, new Vector3(a1, b1 + 2.95f, 0), Quaternion.identity);
                 e1 = false;
             }
-            if (v[0] == 1 && a1 == takeroom[i].transform.position.x && b1 - 4.0f == takeroom[i].transform.position.y && e2 == true)
+            if (v[0] == 0 && a1 == takeroom[i].transform.position.x && (b1 - 4.0f) == takeroom[i].transform.position.y && e2 == true)
             {
+               
                 Instantiate(dend, new Vector3(a1, b1 - 2.95f, 0), Quaternion.identity);
                 e2 = false;
             }
