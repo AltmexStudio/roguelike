@@ -594,27 +594,27 @@ public class RandomGenerator : MonoBehaviour
             }
             takeroom.Add(room);
             if (what == 0)
-                dict[room] = new int[] { 0, 0, 0, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11 };
+                dict[room] = new int[] { 0, 0, 0, 0, 0, 0, 0, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11 };
             else if (what == 1)
-                dict[room] = new int[] { 3, 6, 9, 10, 11 };
+                dict[room] = new int[] { 3, 6, 8, 10, 11 };
             else if (what == 2)
-                dict[room] = new int[] { 4, 7, 8, 10, 11 };
+                dict[room] = new int[] { 4, 7, 9, 10 };
             else if (what == 3)
                 dict[room] = new int[] { 1, 5, 6, 7, 11 };
             else if (what == 4)
-                dict[room] = new int[] { 2, 5, 8, 9, 11 };
+                dict[room] = new int[] { 2, 5, 8, 9, };
             else if (what == 5)
-                dict[room] = new int[] { 0, 0, 0, 0, 0, 3, 6, 9, 10, 4, 7, 8, 11 };
+                dict[room] = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 9, 10, 4, 7, 9, 11 };
             else if (what == 6)
-                dict[room] = new int[] { 0, 0, 0, 0, 0, 3, 6, 9, 10, 1, 5, 7, 11 };
+                dict[room] = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 8, 10, 1, 5, 7, 11 };
             else if (what == 7)
-                dict[room] = new int[] { 0, 0, 0, 0, 0, 3, 6, 9, 10, 2, 5, 8, 11 };
+                dict[room] = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 8, 10, 2, 5, 9, 11 };
             else if (what == 8)
-                dict[room] = new int[] { 0, 0, 0, 0, 0, 4, 7, 8, 10, 2, 5, 9, 11 };
+                dict[room] = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 4, 7, 9, 10, 1, 5, 6, 11 };
             else if (what == 9)
-                dict[room] = new int[] { 0, 0, 0, 0, 0, 4, 7, 8, 10, 1, 5, 6, 11 };
+                dict[room] = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 4, 7, 8, 10, 2, 5, 9 };
             else if (what == 10)
-                dict[room] = new int[] { 0, 0, 0, 0, 0, 1, 5, 6, 7, 2, 8, 9, 11 };
+                dict[room] = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 6, 7, 2, 8, 9, 11 };
             //if (q == C - 1)
             //  break;
         }
@@ -768,19 +768,20 @@ public class RandomGenerator : MonoBehaviour
         {
             int[] v = Napr(takeroom[i]);
 
-            if (v[2] == 0 && a1 == takeroom[i].transform.position.x && (b1 + 4.0f) == takeroom[i].transform.position.y && e1 == true)
+            if (v[2] == 1 && a1 == takeroom[i].transform.position.x && (b1 + 4.0f) == takeroom[i].transform.position.y && e1 == true)
             {
-                
-                Instantiate(dend, new Vector3(a1, b1 + 2.95f, 0), Quaternion.identity);
                 e1 = false;
             }
-            if (v[0] == 0 && a1 == takeroom[i].transform.position.x && (b1 - 4.0f) == takeroom[i].transform.position.y && e2 == true)
+            if (v[0] == 1 && a1 == takeroom[i].transform.position.x && (b1 - 4.0f) == takeroom[i].transform.position.y && e2 == true)
             {
-               
-                Instantiate(dend, new Vector3(a1, b1 - 2.95f, 0), Quaternion.identity);
                 e2 = false;
             }
         }
+
+        if (e1 != false)
+            Instantiate(dend, new Vector3(a1, b1 + 2.95f, 0), Quaternion.identity);
+        else if (e2 != false)
+            tup = Instantiate(dend, new Vector3(a1, b1 - 2.95f, 0), Quaternion.identity);
 
     }
 
