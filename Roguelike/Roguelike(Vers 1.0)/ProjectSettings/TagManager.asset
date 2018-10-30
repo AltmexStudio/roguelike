@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Room
   - StartRoom
-  - enemy
   layers:
   - Default
   - TransparentFX
