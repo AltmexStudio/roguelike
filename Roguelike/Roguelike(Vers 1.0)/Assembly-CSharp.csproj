@@ -63,7 +63,10 @@
   <ItemGroup>
     <Compile Include="Assets\Skripts\Danila\move.cs" />
     <Compile Include="Assets\Skripts\Danila\room with  hallway.cs" />
+    <Compile Include="Assets\Skripts\Dima\Contact.cs" />
+    <Compile Include="Assets\Skripts\Dima\EnemyFollow.cs" />
     <Compile Include="Assets\Skripts\Dima\FollowCamera.cs" />
+    <Compile Include="Assets\Skripts\Dima\Live.cs" />
     <Compile Include="Assets\Skripts\Dima\RandomGenerator.cs" />
     <Compile Include="Assets\Skripts\Ilya\PlayerMovement.cs" />
     <Compile Include="Assets\SomeAssetsFromStore\Virtual Joystick Pack\Scripts\Base\Joystick.cs" />

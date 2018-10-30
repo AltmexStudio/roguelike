@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SceneForTestIlya.unity
+- path: Assets/Scenes/SceneForTestDima.unity
   isLoaded: 1
   isActive: 1
