@@ -14,7 +14,7 @@ public class move : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void FixedUpdate ()
+	void Update ()
     {
         Vector3 moveVector = ((Vector3.right * joystick.Horizontal * maxSpeed) + Vector3.up * joystick.Vertical * maxSpeed) * maxSpeed;
 
