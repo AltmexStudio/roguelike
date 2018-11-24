@@ -19,3 +19,21 @@ Package2(TestItemsForInventory):
 и новые тэги?
 также пак добавляет в префабы образец врага с Даниной сцены
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Package3(NewCharacterAnimation):
+Анимации вызываются по принципу: Animator.SetTrigger("Name[(WeaponOn/WeaponOff)](R/L/U/D)")
+(WeaponOn/WeaponOf) пишем только для анимации ожидания (Idle)
+Список доступных анимаций:
+Idle(WeaponOn)()
+Idle(WeaponOff)()
+Run()
+Walk()
+WeaponOn()
+WeaponOff()
+LeftHit()
+RightHit()
+UpperHit()
+Block()
+TakeDamage()
+
+Ещё добавил новый стиль текста прошу юзать его для всех текстов в игре
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
